@@ -1,0 +1,107 @@
+:root {
+  --color-text: #eeece8;
+  --color-sub: #759189;
+  --color-main: #4a6b77;
+  --color-main-second: #669fa4;
+  --color-main-dark: #2c2d2f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--color-main);
+}
+
+body {
+  margin: 0 13vw;
+}
+
+img {
+  /* width: 74vw; */
+  width: 70vw;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+h1,
+h2,
+ul {
+  /* color: var(--color-text); */
+  color: var(--color-main);
+  list-style: none;
+}
+
+ul {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  /* margin-left: 1vw; */
+}
+
+ul li {
+  margin: 0vw 1vw;
+}
+
+/* Er her fordi jeg gerne vil have en anden farve til min H1 */
+h1 {
+  color: hsl(196, 23%, 24%);
+}
+
+p a {
+  color: var(--color-main);
+}
+
+li img {
+  height: 22em;
+  width: auto;
+}
+
+a {
+  font-size: 0.8em;
+  color: var(--color-main);
+}
+
+a:hover {
+  font-size: 0.81em;
+  color: var(--color-main-second);
+}
+
+/* Classes */
+
+/* .article-text {
+  width: 72vw;
+
+  border-radius: 1rem;
+  padding: 1vw;
+  margin-bottom: 1vw;
+  background-color: var(--color-text);
+  color: var(--color-main);
+} */
+
+/* taget fra Simon's Style.css for at siderne er mere ens. */
+
+body {
+  margin: 1vw 13vw;
+  width: 72vw;
+  border-radius: 1rem;
+  padding: 1vw 1vw;
+  background-color: var(--color-text);
+  color: var(--color-main);
+}

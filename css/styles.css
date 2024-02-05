@@ -1,0 +1,232 @@
+/* Open Sans */
+
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/* TODO: Second font */
+
+:root {
+  --color-main: #fff;
+
+  /* --color-header: #568d36; */
+  --color-header: #c69bff;
+
+  /* --color-header: #e77f56; */
+
+  --button-main: #6d6d6d;
+
+  --button-main-hover: hsl(0, 0%, 33%);
+
+  --card-background: #9e3333;
+
+  --link-color: #082947;
+
+  --link-color-hover: hsl(209, 80%, 35%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+
+  margin: 1vh 1vw, 0;
+}
+
+/* TODO: Check if this aligns the text with the image */
+
+nav * {
+  margin: auto 0;
+}
+
+nav li {
+  list-style: none;
+  padding: 0px, 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-color-hover);
+}
+
+h1,
+h2,
+h3,
+h4,
+a,
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* ID's */
+
+/* Classes */
+
+.button {
+  margin: 0 auto;
+
+  margin-top: 2vh;
+
+  width: 80%;
+
+  background-color: var(--button-main);
+
+  border-radius: 0.3em;
+}
+
+.button:hover {
+  /* Transition 0.4 sec */
+
+  background-color: var(--button-main-hover);
+}
+
+.button i {
+  margin-right: 4px;
+}
+
+.button h4 {
+  text-align: center;
+}
+
+.card-container {
+  /* 100%-20% = 80
+
+  80% - (5*2) = 70
+
+  70 / 2 = 35*/
+
+  /* max-width: 35%; */
+
+  /* Margin-left and right could be removed */
+
+  margin: 2vh 2.5%;
+
+  padding: 2% 0;
+
+  background-color: var(--card-background);
+
+  border-radius: 0.4em;
+}
+
+.card-container img {
+  display: block;
+
+  margin: 0 auto;
+
+  width: 80%;
+
+  max-width: 256px;
+}
+
+.center-80 {
+  width: 80%;
+
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  flex-direction: row;
+}
+
+.center-content {
+  justify-content: space-evenly;
+
+  margin: 0 auto;
+}
+
+.justify-space {
+  justify-content: space-between;
+}
+
+.remove-decorations {
+  text-decoration: none;
+}
+
+.logo {
+  width: 10%;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    background-color: var(--color-header);
+  }
+
+  nav {
+    display: flex;
+
+    padding: 1vh 1vw;
+  }
+
+  /* TODO: Check if this aligns the text with the image */
+
+  nav * {
+    margin: auto 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* ID's */
+
+  /* Classes */
+
+  .button {
+    margin: 0 auto;
+
+    margin-top: 2vh;
+
+    width: 80%;
+
+    background-color: var(--button-main);
+
+    border-radius: 0.3em;
+  }
+
+  .button:hover {
+    /* Transition 0.4 sec */
+
+    background-color: var(--button-main-hover);
+  }
+
+  .button i {
+    margin-right: 4px;
+  }
+
+  .button h4 {
+    text-align: center;
+  }
+
+  .card-container {
+    /* 100%-20% = 80
+
+    80% - (5*3) = 65
+
+    65 / 3 = 21.67*/
+
+    max-width: 22%;
+  }
+
+  .card-container img {
+    display: block;
+
+    margin: 0 auto;
+
+    width: 80%;
+
+    max-width: 256px;
+  }
+
+  .logo {
+    width: 6%;
+  }
+}

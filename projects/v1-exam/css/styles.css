@@ -1,0 +1,390 @@
+/* Fonts */
+
+/* Open Sans */
+/* 'Open Sans', sans-serif */
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"); */
+
+/* Roboto */
+/* 'Roboto', sans-serif */
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); */
+
+/* Oswald */
+/* 'Oswald', sans-serif */
+/* ? BIG AND GREEDY FONT */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+/* Raleway */
+/* 'Raleway', sans-serif */
+/* ? Anything else */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color-main: #fff;
+  --color-gray: #7e7e7e;
+
+  --color-black: #111111;
+
+  /* --link-hover-light-bg: #111111; */
+  --link-hover-light-bg: #f06201;
+  /* --link-hover-light-bg: #7e4e2f; */
+  --link-hover-dark-bg: #fff;
+
+  --link-transition-time: 0.4s;
+
+  /* You can't change the color, unless you use a filter */
+  /* Converter used: https://codepen.io/sosuke/pen/Pjoqqp */
+  --filter-orange: invert(39%) sepia(42%) saturate(4842%) hue-rotate(11deg)
+    brightness(104%) contrast(99%);
+
+  --filter-white: invert(100%) sepia(0%) saturate(0%) hue-rotate(301deg)
+    brightness(105%) contrast(101%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+
+  background-color: var(--color-black);
+}
+
+nav img {
+  padding-top: 1%;
+  /* padding-left: 5%; */
+  width: 100px;
+  height: 50px;
+}
+
+ul li {
+  text-transform: uppercase;
+}
+
+/* Hamburger START */
+
+.view-mobile {
+  z-index: 10;
+  /* position: absolute; */
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding-bottom: 2%;
+}
+
+/* Changes the color of the SVG icons */
+label img {
+  filter: var(--filter-white);
+}
+
+ul li a {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+}
+
+.menu-icon {
+}
+
+.close-icon {
+  display: none;
+  z-index: 8;
+}
+
+.checkbox {
+  display: none;
+}
+
+.view-mobile ul {
+  display: none;
+}
+
+.checkbox:checked ~ ul {
+  padding-top: 5%;
+  display: block;
+  position: absolute;
+  z-index: 10;
+  top: 7%;
+  background-color: var(--color-black);
+  width: 100%;
+  height: 550vh;
+  text-align: center;
+}
+
+.checkbox:checked ~ ul li {
+  padding-bottom: 1.5em;
+}
+
+.checkbox:checked ~ ul li a {
+  text-decoration: none;
+  color: var(--color-main);
+  font-size: 1.2em;
+}
+
+.checkbox:checked ~ label .menu-icon {
+  display: none;
+}
+
+.checkbox:checked ~ label .close-icon {
+  display: block;
+}
+
+.view-desktop {
+  display: none;
+}
+
+/* Hamburger END */
+
+li,
+a {
+  text-decoration: none;
+  list-style-type: none;
+  /* color: ; */
+}
+
+a:hover,
+div a:hover {
+  transition: var(--link-transition-time);
+  color: var(--link-hover-light-bg);
+}
+
+a {
+  transition: var(--link-transition-time) ease-in;
+  color: var(--color-black);
+}
+
+a:hover {
+  transition: var(--link-transition-time) ease-in;
+  color: var(--link-hover-light-bg);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Oswald", sans-serif;
+}
+
+h4,
+h5,
+h6,
+p,
+a {
+  /* font-family: "Open Sans", sans-serif; */
+  /* To me, Roboto looks more like a font Nike would use */
+  font-family: "Raleway", sans-serif;
+}
+
+nav a {
+  color: var(--color-black);
+  margin: 1vw auto;
+}
+
+main p {
+  margin: auto 5%;
+}
+
+footer {
+  background-color: var(--color-black);
+  margin-top: 8vh;
+  font-weight: bold;
+}
+
+footer article {
+  flex-direction: column;
+}
+
+footer a {
+  transition: var(--link-transition-time) ease-in;
+  color: var(--color-gray);
+}
+
+/* Used to use var(--link-hover-dark-bg) */
+/* footer a:hover {
+  color: var(--link-hover-light-bg);
+} */
+
+footer h2,
+footer h3 {
+  color: var(--color-main);
+  padding: 1vh 0;
+}
+
+footer p {
+  color: var(--color-gray);
+}
+
+footer article {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+/* ID's */
+#logo {
+  width: 16%;
+  margin: 2vh 4vw;
+  z-index: 26;
+}
+
+#logo img {
+  width: 100px;
+}
+
+#banner img {
+  width: 100%;
+}
+
+#footer-left {
+}
+
+#footer-mid {
+}
+
+/* Classes */
+
+.margin-sides-10p {
+  margin: auto 15%;
+}
+
+.padding-sides-10p {
+  padding: 0 15%;
+}
+
+.padding-bottom {
+  padding-bottom: 6vh;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.shoes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.shoes a {
+  color: var(--color-black);
+}
+
+section.shoes div {
+  margin: 1vh auto;
+}
+
+section.shoes div > * {
+  /* TODO: Don't remember what this does. Find out later*/
+  /* width: 100%; */
+  text-align: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-icon-colum {
+  /* align-content: center; */
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  margin: 2vh 0;
+}
+
+.text-p-space {
+}
+
+.text-p-space > * {
+  margin: 2vh auto;
+}
+
+@media screen and (min-width: 768px) {
+  footer article {
+    flex-direction: row;
+  }
+
+  .shoes {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .view-desktop {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: auto;
+    margin-right: 4vw;
+    margin-bottom: auto;
+    margin-left: auto;
+    /* margin: auto auto; */
+  }
+
+  .view-desktop ul {
+    display: flex;
+    flex-direction: row;
+    width: 34vw;
+
+    justify-content: space-evenly;
+  }
+
+  /* .view-desktop li {
+    padding: 2% 0;
+
+    text-align: right;
+  } */
+
+  .view-desktop a {
+    transition: var(--link-transition-time) ease-in;
+    color: var(--color-main);
+  }
+
+  .view-desktop a:hover {
+    /* transition: color var(--link-hover-light-bg) var(--link-transition-time)
+      ease-in-out;
+    transition: ease-out var(--link-transition-time); */
+    transition: var(--link-transition-time) ease-in;
+    color: var(--link-hover-light-bg);
+  }
+
+  .view-mobile {
+    display: none;
+  }
+
+  .shoes {
+    /* margin: 0 auto; */
+  }
+
+  .shoes div {
+    margin: 2vh auto !important;
+  }
+
+  section.shoes div {
+    /*  3 shoes pr row
+        2% margin
+        4 * (2% * 2%) = 16%
+        100% - 16% = 84%
+        84% / 3 = 28%
+    */
+    /* max-width: 28%; */
+    width: 33%;
+
+    display: flex;
+    align-content: center;
+
+    /* margin: 0 auto; */
+  }
+
+  section.shoes div * {
+    margin: 0 auto;
+  }
+}

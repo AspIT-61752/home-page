@@ -1,0 +1,149 @@
+/* Fonts */
+
+/* Open Sans */
+/* 'Open Sans', sans-serif */
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"); */
+
+/* Roboto */
+/* 'Roboto', sans-serif */
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); */
+
+/* Oswald */
+/* 'Oswald', sans-serif */
+/* ? BIG AND GREEDY FONT */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+/* Raleway */
+/* 'Raleway', sans-serif */
+/* ? Anything else */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color-main: #fff;
+  --color-gray: #7e7e7e;
+
+  --color-black: #111111;
+
+  /* --link-hover-light-bg: #111111; */
+  --link-hover-light-bg: #f06201;
+  /* --link-hover-light-bg: #7e4e2f; */
+  --link-hover-dark-bg: #fff;
+
+  --link-transition-time: 0.4s;
+
+  /* You can't change the color, unless you use a filter */
+  /* Converter used: https://codepen.io/sosuke/pen/Pjoqqp */
+  --filter-orange: invert(39%) sepia(42%) saturate(4842%) hue-rotate(11deg)
+    brightness(104%) contrast(99%);
+
+  --filter-white: invert(100%) sepia(0%) saturate(0%) hue-rotate(301deg)
+    brightness(105%) contrast(101%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* It overwrites the original in styles.css */
+main p {
+  margin: 0 0;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+/* ID's */
+
+/* Classes */
+.img-width {
+  width: 100%;
+}
+
+.img-left {
+  float: 0;
+  margin-right: 1;
+}
+
+.img-right {
+  float: 0;
+  margin-left: 0;
+}
+
+.view-mobile {
+  display: flex;
+}
+
+.view-computer {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  /* Media start */
+
+  /* ID's */
+
+  /* Classes */
+  .img-width {
+    width: 500%;
+    height: 50%;
+  }
+
+  .img-width-middle {
+    width: 375%;
+    height: 50%;
+  }
+
+  .img-left {
+    /* float: left; */
+    margin-right: 1vw;
+    /* width: ; */
+  }
+
+  .img-left div,
+  .img-right div {
+    display: block;
+    width: 50%;
+  }
+
+  .img-right {
+    /* float: right; */
+
+    margin-left: 1vw;
+    /* align-self: baseline; */
+  }
+
+  .text-box-middle {
+    text-align: left;
+  }
+
+  .text-box-middle h2 {
+    text-align: right;
+  }
+
+  .text-box {
+    text-align: left;
+  }
+
+  .flex-container-left {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+  }
+
+  .flex-container-right {
+    display: flex;
+  }
+
+  .view-mobile {
+    display: none;
+  }
+
+  .view-computer {
+    display: flex;
+  }
+}
