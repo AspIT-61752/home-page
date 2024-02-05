@@ -1,0 +1,30 @@
+:root {
+  --bg-color: #c26b6b;
+  --weird-h1-color: #6bc28f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+p {
+  color: var(--weird-h1-color);
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+p {
+  font-size: xx-small;
+}
+
+body {
+  background-color: var(--bg-color);
+}
