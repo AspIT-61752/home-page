@@ -1,0 +1,29 @@
+:root {
+  --color-text: #000;
+
+  --color-bg: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 12vh 10vw;
+
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  /* font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+  padding-top: 5rem; */
+}
+
+header {
+  grid-row: 1;
+  grid-template-columns: auto auto 33%;
+}
