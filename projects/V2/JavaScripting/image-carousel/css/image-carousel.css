@@ -1,0 +1,74 @@
+:root {
+  --img-width: 72vw;
+  /* TODO: Change this to whitesmoke when the button position is done */
+  --button-color: hsl(240, 16%, 75%);
+  --button-hover-color: #015bcd;
+  /* --button-hover-color: #2079a5; */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+#img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#img-container > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slides > * {
+  opacity: 0;
+  width: var(--img-width);
+
+  transition: all 0.5s ease-in-out;
+}
+
+.current-slide {
+  opacity: 1;
+  z-index: 1;
+}
+
+#button-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: end;
+  gap: 8px;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.span-button {
+  z-index: 2;
+  padding: 8px;
+  background-color: var(--button-color);
+  border-radius: 50%;
+  border: 1px solid rgb(204, 204, 204);
+  /* opacity: 0.9; */
+
+  transition: all 0.15s ease-in-out;
+}
+
+.span-button:hover {
+  /* opacity: 1; */
+  background-color: var(--button-hover-color);
+  cursor: pointer;
+}

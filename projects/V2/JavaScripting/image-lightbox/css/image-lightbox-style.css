@@ -1,0 +1,71 @@
+:root {
+  --image-bg-color: hsla(0, 0%, 10%, 0.9);
+  --body-bg-color: #808080;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  background-color: var(--body-bg-color);
+}
+
+li {
+  list-style-type: none;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+.gallery {
+  display: flex;
+  max-width: 1280px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+/* Everything just bellow the gallery class is affected */
+.gallery > * {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 2;
+
+  background-color: var(--image-bg-color);
+}
+
+.overlay:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1280px) {
+  .overlay {
+    align-items: center;
+  }
+
+  .overlay img {
+    width: 90vw;
+    height: 50%;
+  }
+}
