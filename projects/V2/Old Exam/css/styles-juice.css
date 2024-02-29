@@ -1,0 +1,18 @@
+:root {
+  --main-desktop-width-juice: 100%;
+  --footer-desktop-width-juice: 100%;
+}
+
+/* Desktop */
+@media screen and (min-width: 780px) {
+  header {
+    background-color: aqua;
+  }
+  main {
+    width: var(--main-desktop-width-juice);
+  }
+
+  footer {
+    width: var(--footer-desktop-width-juice);
+  }
+}
