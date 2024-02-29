@@ -26,6 +26,8 @@
   --icon-footer-width: 50px;
   --icon-footer-width-shop-desktop: 100px;
 
+  --margin-p-mobile: 1.4rem;
+
   --font-size-body: 1.4rem;
 
   /* Mobile font variables */
@@ -62,6 +64,9 @@ h3 {
   font-size: var(--font-size-h3-mobile);
 }
 
+p {
+}
+
 body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -72,11 +77,17 @@ header {
   background-color: var(--green-color);
 
   padding: var(--header-padding);
+
+  /* width: 100%; */
+
+  top: 0;
+  position: sticky;
+  /* top: 90%; */
+  z-index: 2;
 }
 
 /* This should always be the logo */
-/* Do NOT remove the space! */
-header :first-child {
+header img:first-child {
   height: 5rem;
 }
 
@@ -87,9 +98,30 @@ header > img {
 
   top: var(--icon-mobile-top);
   right: var(--icon-mobile-right);
+
+  display: none;
 }
 
 nav {
+  display: flex;
+  background-color: var(--bg-menu-mobile);
+  position: absolute;
+
+  /* It just works - Toddie */
+  /* Ask why this works, I'm confused. */
+  top: 1;
+  left: 0;
+  width: 100%;
+  height: 99vh;
+  z-index: 1;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+
+  /* Transition */
+  overflow: hidden;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
 }
 
 nav a {
@@ -104,6 +136,63 @@ main {
 
 main article:first-of-type {
   display: none;
+}
+
+main section:nth-of-type(2) article {
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  /* margin: var(--margin-p-mobile) 0; */
+  margin: 2.4rem 0;
+}
+
+section:first-of-type article:nth-of-type(2) p {
+  margin: var(--margin-p-mobile) 0;
+}
+
+/* This is just for the Menu on the home page. Check if it should just be h2 instead of all of that extra stuff */
+section:first-of-type h2 {
+  margin-top: 4.2rem;
+}
+
+/* This is the slideshow, and it shouldn't be on mobile devices */
+main section:last-of-type {
+  display: none;
+}
+
+footer {
+  color: var(--white-color);
+  background-color: var(--green-color);
+
+  /* margin: 0 ; */
+  padding: 1.8rem var(--font-size-body);
+}
+
+footer a {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+footer img {
+  width: var(--icon-footer-width);
+  height: auto; /* Ask if this is ok */
+  /* height: var(--icon-footer-width); */
+}
+
+footer img:last-of-type {
+  /* width: var(--icon-footer-width-shop-desktop); */
+  height: auto;
+}
+
+/* Used in BurgerMenu.js */
+.is-active {
+  display: block;
+}
+
+.show-menu {
+  transform: translateX(0);
 }
 
 /* Desktop */
