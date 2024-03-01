@@ -71,6 +71,8 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: var(--font-size-body);
+
+  overflow-x: hidden;
 }
 
 header {
@@ -78,20 +80,20 @@ header {
 
   padding: var(--header-padding);
 
-  /* width: 100%; */
-
   top: 0;
-  position: sticky;
+  /* position: sticky; */
+  position: fixed;
+  width: calc(100% - var(--header-padding) * 2);
   /* top: 90%; */
   z-index: 2;
 }
 
 /* This should always be the logo */
-header img:first-child {
+header a img:first-child {
   height: 5rem;
 }
 
-header > img {
+header div > img {
   width: var(--icon-mobile-width);
   height: var(--icon-mobile-height);
   position: absolute;
@@ -112,7 +114,7 @@ nav {
   top: 1;
   left: 0;
   width: 100%;
-  height: 99vh;
+  height: calc(100vh - var(--header-height));
   z-index: 1;
   flex-direction: column;
   /* align-items: center; */
@@ -138,6 +140,10 @@ main article:first-of-type {
   display: none;
 }
 
+main section:first-of-type h1 {
+  padding-top: var(--header-height);
+}
+
 main section:nth-of-type(2) article {
   display: flex;
   flex-direction: column;
@@ -145,7 +151,11 @@ main section:nth-of-type(2) article {
 
 article {
   /* margin: var(--margin-p-mobile) 0; */
-  margin: 2.4rem 0;
+  margin: 1.4rem 0;
+}
+
+main section:nth-of-type(2) article h4 {
+  margin-top: 0.4rem;
 }
 
 section:first-of-type article:nth-of-type(2) p {
