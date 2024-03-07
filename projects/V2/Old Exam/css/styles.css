@@ -1,231 +1,297 @@
 :root {
-  --green-color: hsl(104, 58%, 47%);
-  --orange-color: hsl(28, 96%, 48%);
-  --white-color: hsl(0, 0%, 96%);
-  --bg-menu-hover: hsla(0, 0%, 0%, 0.3);
-  --bg-menu-mobile: hsla(0, 0%, 0%, 0.95);
-  --bg-lightbox-overlay: hsla(0, 0%, 10%, 0.95);
+	--green-color: hsl(104, 58%, 47%);
+	--orange-color: hsl(28, 96%, 48%);
+	--white-color: hsl(0, 0%, 96%);
+	--bg-menu-hover: hsla(0, 0%, 0%, 0.3);
+	--bg-menu-mobile: hsla(0, 0%, 0%, 0.95);
+	--bg-lightbox-overlay: hsla(0, 0%, 10%, 0.95);
 
-  --header-height: 80px;
-  --header-padding: 0.5rem;
+	--header-height: 80px;
+	--header-padding: 0.5rem;
 
-  --main-padding-mobile: 1rem;
-  --main-padding-desktop: 4rem;
+	--header-offset: 1.4;
 
-  --main-desktop-width: 80%;
-  --footer-desktop-width: 80%;
+	--main-padding-mobile: 1rem;
+	--main-padding-desktop: 4rem;
 
-  /* Moved to styles-juice.css */
-  /* --main-desktop-width-juice: 100%;
+	--main-desktop-width: 80%;
+	--footer-desktop-width: 80%;
+
+	/* Moved to styles-juice.css */
+	/* --main-desktop-width-juice: 100%;
   --footer-desktop-width-juice: 100%; */
 
-  --icon-mobile-width: 50px;
-  --icon-mobile-height: 50px;
-  --icon-mobile-top: 20px;
-  --icon-mobile-right: 10px;
-  --icon-footer-width: 50px;
-  --icon-footer-width-shop-desktop: 100px;
+	--icon-mobile-width: 50px;
+	--icon-mobile-height: 50px;
+	--icon-mobile-top: 20px;
+	--icon-mobile-right: 10px;
+	--icon-footer-width: 50px;
+	--icon-footer-width-shop-desktop: 100px;
 
-  --margin-p-mobile: 1.4rem;
+	--margin-p-mobile: 1.4rem;
 
-  --font-size-body: 1.4rem;
+	--font-size-body: 1.4rem;
 
-  /* Mobile font variables */
-  --font-size-h1-mobile: 2.5rem;
-  --font-size-h2-mobile: 1.5rem;
-  --font-size-h3-mobile: 1.2rem;
+	/* Mobile font variables */
+	--font-size-h1-mobile: 2.5rem;
+	--font-size-h2-mobile: 1.5rem;
+	--font-size-h3-mobile: 1.2rem;
 
-  /* Desktop font variables */
-  --font-size-h1-desktop: 3rem;
-  --font-size-h2-desktop: 2.3rem;
-  --font-size-h3-desktop: 1.2rem;
+	/* Desktop font variables */
+	--font-size-h1-desktop: 3rem;
+	--font-size-h2-desktop: 2.3rem;
+	--font-size-h3-desktop: 1.2rem;
+
+	/* Used on some of the pages */
+	--last-img-margin-bottom: 2.6rem;
+
+	/* Frugt.html */
+	--fruit-img-gap: 4.4rem;
+
+	/* Juice.html */
+	--juice-img-gap: 2.2rem;
 }
 
 * {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 h1,
 h2,
 h3 {
-  font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-  font-size: var(--font-size-h1-mobile);
+	font-size: var(--font-size-h1-mobile);
 }
 
 h2 {
-  font-size: var(--font-size-h2-mobile);
+	font-size: var(--font-size-h2-mobile);
 }
 
 h3 {
-  font-size: var(--font-size-h3-mobile);
+	font-size: var(--font-size-h3-mobile);
 }
 
 p {
 }
 
 body {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-size: var(--font-size-body);
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	font-size: var(--font-size-body);
 
-  overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 header {
-  background-color: var(--green-color);
+	background-color: var(--green-color);
 
-  padding: var(--header-padding);
+	padding: var(--header-padding);
 
-  top: 0;
-  /* position: sticky; */
-  position: fixed;
-  width: calc(100% - var(--header-padding) * 2);
-  /* top: 90%; */
-  z-index: 2;
+	top: 0;
+	position: fixed;
+	width: calc(100% - var(--header-padding) * 2);
+
+	z-index: 2;
 }
 
 /* This should always be the logo */
 header a img:first-child {
-  height: 5rem;
+	height: 5rem;
 }
 
 header div > img {
-  width: var(--icon-mobile-width);
-  height: var(--icon-mobile-height);
-  position: absolute;
+	width: var(--icon-mobile-width);
+	height: var(--icon-mobile-height);
+	position: absolute;
 
-  top: var(--icon-mobile-top);
-  right: var(--icon-mobile-right);
+	top: var(--icon-mobile-top);
+	right: var(--icon-mobile-right);
 
-  display: none;
+	display: none;
 }
 
 nav {
-  display: flex;
-  background-color: var(--bg-menu-mobile);
-  position: absolute;
+	display: flex;
+	background-color: var(--bg-menu-mobile);
+	position: absolute;
 
-  /* It just works - Toddie */
-  /* Ask why this works, I'm confused. */
-  top: 1;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - var(--header-height));
-  z-index: 1;
-  flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
+	/* It just works - Toddie */
+	/* Ask why this works, I'm confused. */
+	top: 1;
+	left: 0;
+	width: 100%;
+	height: calc(100vh - var(--header-height));
+	z-index: 1;
+	flex-direction: column;
 
-  /* Transition */
-  overflow: hidden;
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
+	/* Transition */
+	overflow: hidden;
+
+	/* Not really sure how to fix the animation playing when the page loads */
+	/* Idk if this works all the time, it looks like it works sometimes, but why ??? It's fine on Chrome, but on Firefox it's fine ~ 40% of the time! */
+	transform: translateX(100%);
+	transition: transform 0.3s ease-in-out;
 }
 
 nav a {
-  color: var(--white-color);
-  text-decoration: none;
-  padding: 1rem;
+	color: var(--white-color);
+	text-decoration: none;
+	padding: 1rem;
 }
 
 main {
-  padding: var(--main-padding-mobile);
+	padding: var(--main-padding-mobile);
 }
 
-main article:first-of-type {
-  display: none;
+/* This should be put on the main tag */
+.remove-fir-article article:first-of-type {
+	display: none;
 }
 
 main section:first-of-type h1 {
-  padding-top: var(--header-height);
+	padding-top: calc(var(--header-height) * var(--header-offset));
 }
 
 main section:nth-of-type(2) article {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 article {
-  /* margin: var(--margin-p-mobile) 0; */
-  margin: 1.4rem 0;
+	/* margin: var(--margin-p-mobile) 0; */
+	margin: 1.4rem 0;
 }
 
-main section:nth-of-type(2) article h4 {
-  margin-top: 0.4rem;
+main section:nth-of-type(2) article h4:first-of-type {
+	/* If every H4 in the article should have 0.4rem, remove the :first-of-type */
+	margin-top: 0.4rem;
 }
 
 section:first-of-type article:nth-of-type(2) p {
-  margin: var(--margin-p-mobile) 0;
+	margin: var(--margin-p-mobile) 0;
 }
 
 /* This is just for the Menu on the home page. Check if it should just be h2 instead of all of that extra stuff */
 section:first-of-type h2 {
-  margin-top: 4.2rem;
+	margin-top: 3.2rem;
 }
 
 /* This is the slideshow, and it shouldn't be on mobile devices */
-main section:last-of-type {
-  display: none;
+/* main section:last-of-type */
+.slideshow-container {
+	display: none;
 }
 
 footer {
-  color: var(--white-color);
-  background-color: var(--green-color);
+	color: var(--white-color);
+	background-color: var(--green-color);
 
-  /* margin: 0 ; */
-  padding: 1.8rem var(--font-size-body);
+	/* margin: 0 ; */
+	padding: 1.8rem var(--font-size-body);
+}
+
+footer > div {
+	display: flex;
+	justify-content: start;
+	place-items: center;
+
+	margin-top: 1.8rem;
+}
+
+footer div img {
+	margin-right: 1rem;
+}
+
+/* TODO: This might not do anything... Check it later */
+.flex-dir-column {
+	display: flex;
+	flex-direction: column;
 }
 
 footer a {
-  color: var(--white-color);
-  text-decoration: none;
+	color: var(--white-color);
+	text-decoration: none;
 }
 
 footer img {
-  width: var(--icon-footer-width);
-  height: auto; /* Ask if this is ok */
-  /* height: var(--icon-footer-width); */
+	width: var(--icon-footer-width);
+	height: auto; /* Ask if this is ok */
+	/* height: var(--icon-footer-width); */
 }
 
 footer img:last-of-type {
-  /* width: var(--icon-footer-width-shop-desktop); */
-  height: auto;
+	/* width: var(--icon-footer-width-shop-desktop); */
+	height: auto;
 }
+
+/* Frugt.html */
+
+.fruit-img-container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--fruit-img-gap);
+}
+.fruit-img-container img {
+	width: 100%;
+}
+
+.fruit-img-container img:last-of-type {
+	margin-bottom: var(--last-img-margin-bottom);
+}
+
+/* Frugt.html === END === */
+
+/* Juice.html */
+
+.juice-container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--juice-img-gap);
+}
+.juice-container img {
+	width: 100%;
+}
+
+.juice-container div:last-of-type {
+	margin-bottom: var(--last-img-margin-bottom);
+}
+
+/* Juice.html === END === */
 
 /* Used in BurgerMenu.js */
 .is-active {
-  display: block;
+	display: block;
 }
 
 .show-menu {
-  transform: translateX(0);
+	transform: translateX(0);
 }
 
 /* Desktop */
 @media screen and (min-width: 780px) {
-  h1 {
-    font-size: var(--font-size-h1-desktop);
-  }
+	h1 {
+		font-size: var(--font-size-h1-desktop);
+	}
 
-  h2 {
-    font-size: var(--font-size-h2-desktop);
-  }
+	h2 {
+		font-size: var(--font-size-h2-desktop);
+	}
 
-  h3 {
-    font-size: var(--font-size-h3-desktop);
-  }
+	h3 {
+		font-size: var(--font-size-h3-desktop);
+	}
 
-  nav a {
-    color: var(--white-color);
-    text-decoration: none;
-    padding: 1rem;
-  }
+	nav a {
+		color: var(--white-color);
+		text-decoration: none;
+		padding: 1rem;
+	}
 
-  main {
-    padding: var(--main-padding-desktop);
-  }
+	main {
+		padding: var(--main-padding-desktop);
+	}
 }

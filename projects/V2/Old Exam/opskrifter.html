@@ -26,15 +26,19 @@
             <a href="opskrifter.html">Opskrifter</a>
             <a href="juice.html">Juicer</a>
         </nav>
+
     </header>
 
-    <div>
-        <a href="#graeskarsuppe">Græskarsuppe</a>
-        <a href="#kikaerteboeffer">Kikærtebøffer</a>
-        <a href="#fladbroed">Marokkansk fladbrød</a>
-    </div>
+
+    <!-- ~~The orange menu used to be here, I moved it up to the nav~~ -->
 
     <main>
+        <!-- This is the orange menu -->
+        <div>
+            <a href="#graeskarsuppe">Græskarsuppe</a>
+            <a href="#kikaerteboeffer">Kikærtebøffer</a>
+            <a href="#fladbroed">Marokkansk fladbrød</a>
+        </div>
         <section>
             <h1>Opskrifter</h1>
             <article id="graeskarsuppe">
@@ -152,7 +156,7 @@
                 <a href="#top">Til toppen</a>
             </article>
         </section>
-        <section>
+        <section class="slideshow-container">
             <h3>Har du prøvet en af vores friskpressede juicer til kun 35kr?</h3>
             <article>
                 <a href="juice.html">
@@ -173,16 +177,26 @@
         <p>Hasselblad Allé 4</p>
         <p>8000 Aarhus C.</p>
 
-        <img src="img/Cell-phone-icon.png">
-        <p>12 34 56 78</p>
-        <img src="img/Email-icon.png">
-        <a href="mailto:info@frugtogfastfood.dk">info@frugtogfastfood.dk</a>
-        <img src="img/instagram-icon.png">
-        <a href="#">Følg os på Instagram</a>
+        <div>
+            <img src="img/Cell-phone-icon.png">
+            <p>12 34 56 78</p>
+        </div>
+        <div>
+            <img src="img/Email-icon.png">
+            <a href="mailto:info@frugtogfastfood.dk">info@frugtogfastfood.dk</a>
+        </div>
+        <div>
+            <img src="img/instagram-icon.png">
+            <a href="#">Følg os på Instagram</a>
+        </div>
 
-        <img src="img/shop-icon.png">
-        <p>Man - fre: 10 - 18</p>
-        <p>Lør: 10 - 14</p>
+        <div>
+            <img src="img/shop-icon.png">
+            <div class=".flex-dir-column">
+                <p>Man - fre: 10 - 18</p>
+                <p>Lør: 10 - 14</p>
+            </div>
+        </div>
     </footer>
 </body>
 
